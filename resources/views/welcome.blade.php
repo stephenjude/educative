@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1 style="text-align: center">
-    {{ $title }}
+    Laravel 8 From Scratch Course
 </h1>
 
 <p style="text-align: center">
