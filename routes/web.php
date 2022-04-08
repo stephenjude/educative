@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('welcome');
-Route::view('/about', 'about')->name('about');
+Route::get('/', function (Request $request) {
+    $data = [
+        'title' => 'Laravel 8 From Scratch Course',
+    ];
+
+    return view('welcome', $data);
+})->name('welcome');
+
+Route::get('/about', function (Request $request) {
+    $data = [
+        'url' => $request->url(),
+        'method' => $request->method(),
+        'ip' => $request->ip(),
+        'browser' => $request->userAgent(),
+    ];
+
+    return view('about', $data);
+})->name('about');

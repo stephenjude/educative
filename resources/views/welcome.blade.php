@@ -8,12 +8,12 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1 style="text-align: center">
-        Laravel 8 From Scratch Course
-    </h1>
+<h1 style="text-align: center">
+    {{ $title }}
+</h1>
 
-    <p style="text-align: center">
-        <a href="{{ route('about') }}">About</a>
-    </p>
+<p style="text-align: center">
+    <a href="{{ route('about') }}">About</a>
+</p>
 </body>
 </html>

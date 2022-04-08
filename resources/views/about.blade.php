@@ -11,6 +11,12 @@
     <h1 style="text-align: center">
         About Laravel 8 From Scratch Course
     </h1>
+    <ol>
+        <li>URL: {{$url}}</li>
+        <li>METHOD: {{$method}}</li>
+        <li>IP: {{$ip}}</li>
+        <li>BROWSER: {{$browser}}</li>
+    </ol>
     <p style="text-align: center">
         <a href="{{ route('welcome') }}">Home</a>
     </p>
