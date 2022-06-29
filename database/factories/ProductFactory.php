@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ProductFactory extends Factory
 {
@@ -15,7 +16,7 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $name = $this->faker->unique()->catchPhrase(),
-            'slug' => Str::slug($name),
+            'slug' => $this->faker->slug,
             'description' => $this->faker->realText(),
             'image_url' => $this->faker->imageUrl(),
             'qty' => $this->faker->randomDigitNotNull(),
