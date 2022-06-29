@@ -16,7 +16,7 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $name = $this->faker->unique()->catchPhrase(),
-            'slug' => $this->faker->slug,
+            'slug' => $this->faker->slug($name),
             'description' => $this->faker->realText(),
             'image_url' => $this->faker->imageUrl(),
             'qty' => $this->faker->randomDigitNotNull(),
