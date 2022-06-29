@@ -15,8 +15,8 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $name = $this->faker->unique()->catchPhrase(),
-            'slug' => $this->faker->slug,
+            'name' => $this->faker->unique()->catchPhrase(),
+            'slug' => $this->faker->unique()->slug,
             'description' => $this->faker->realText(),
             'image_url' => $this->faker->imageUrl(),
             'qty' => $this->faker->randomDigitNotNull(),
